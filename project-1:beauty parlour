@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beauty Parlour Appointment Booking</title>
+    <style>
+        /* Add CSS for styling */
+        /* For simplicity, I'm adding inline styles here */
+        /* In a real project, use an external CSS file */
+        /* Style the form */
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+        /* Style form inputs */
+        input[type="text"],
+        input[type="date"],
+        input[type="time"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        /* Style the submit button */
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Beauty Parlour Appointment Booking</h1>
+    <form id="appointmentForm">
+        <label for="clientName">Your Name</label>
+        <input type="text" id="clientName" name="clientName" required>
+
+        <label for="appointmentDate">Appointment Date</label>
+        <input type="date" id="appointmentDate" name="appointmentDate" required>
+
+        <label for="appointmentTime">Appointment Time</label>
+        <input type="time" id="appointmentTime" name="appointmentTime" required>
+
+        <label for="serviceType">Select Service</label>
+        <select id="serviceType" name="serviceType">
+            <option value="haircut">Haircut</option>
+            <option value="manicure">Manicure</option>
+            <option value="pedicure">Pedicure</option>
+            <!-- Add more options for various services -->
+        </select>
+
+        <input type="submit" value="Book Appointment">
+    </form>
+
+    <!-- JavaScript for handling form submission -->
+    <script>
+        document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Appointment booked! the details will be sent as a message to your contact number.');
+        });
+    </script>
+</body>
+</html>
